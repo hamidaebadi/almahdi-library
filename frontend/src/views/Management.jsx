@@ -44,7 +44,7 @@ const Management = () => {
             <div className="ml-[15%] w-[calc(100%-15%)]  bg-gray-50 mt-20">
             {/* Navbar fixed at the top of the content area */}
             {/* Main content with margin-top to account for navbar height */}
-            <div className="mt-[56px] p-6">
+            <div className="">
               <Outlet />
             </div>
           </div>

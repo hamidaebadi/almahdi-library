@@ -12,16 +12,15 @@ const Sidebar = ({ menuObj, title }) => {
       </div>
 
       {/* Navigation Links */}
-      <nav className="flex flex-col">
+      <nav className="flex flex-col gap-2">
         {menuObj.map((item) =>
         <>
-        
               <NavLink
                 key={item.id}
                 to={item.url}
                 className={({ isActive }) =>
                   `flex gap-5 p-4 rounded text-gray-800 hover:bg-green-800 hover:text-white 
-                            ${isActive ? 'bg-gray-200 text-gray-800 font-semibold rounded-lg' : ''
+                            ${isActive ? 'bg-green-900 text-white font-semibold rounded' : ''
                   }`
                 }
               >
