@@ -1,7 +1,7 @@
 const Navbar = () => {
     return(
         <nav className=" fixed w-full
-             border-b-1 border-gray-300 p-5 top-0">
+             border-b-1 border-gray-300 p-5 top-0 bg-white">
                 {/* Right: Inline Login Form */}
                 <form className="flex items-center space-x-3">
                     <input
