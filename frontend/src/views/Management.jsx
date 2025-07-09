@@ -41,7 +41,7 @@ const Management = () => {
         <Navbar />
         <Sidebar menuObj={menuObj} title={title}/>
         <div className="flex">
-            <div className="ml-[15%] w-[calc(100%-15%)]  bg-gray-50 mt-20">
+            <div className="ml-[15%] w-[calc(100%-15%)]  bg-gray-50 mt-19">
             {/* Navbar fixed at the top of the content area */}
             {/* Main content with margin-top to account for navbar height */}
             <div className="">
