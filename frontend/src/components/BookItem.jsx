@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 
 const BookItem = ({ book }) => {
     return (
-        <Link to="book_details" className="w-full max-w-xs bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition p-4 flex flex-col">
+        <Link to={`book_details/${book.id}`}
+         className="w-full max-w-xs bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition p-4 flex flex-col">
         <div >
             <div className="h-48 flex justify-center items-center overflow-hidden rounded-md bg-gray-50 mb-4">
                 {book.coverImageUrl ? (

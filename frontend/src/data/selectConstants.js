@@ -16,7 +16,7 @@ export const languages = [
 ]
 export const categories = [
   { value: 'quran', label: 'Qur\'an & Tafsir' },
-  { value: 'hadith', label: 'Hadith & Narrations' },
+  { value: 'hadith', label: 'Hadith' },
   { value: 'fiqh', label: 'Fiqh & Islamic Laws' },
   { value: 'aqeedah', label: 'Aqeedah & Theology' },
   { value: 'history', label: 'Islamic History' },
@@ -32,3 +32,9 @@ export const categories = [
   { value: 'contemporary', label: 'Contemporary Issues' },
   { value: 'general', label: 'General Islamic Knowledge' },
 ];
+
+export const bookConditions = [
+  {value: 'new', label: 'New'},
+  {value: 'like new', label: 'Like New'},
+  {value: 'used', label: 'Used'}
+]

@@ -14,7 +14,7 @@ const Sidebar = ({ menuObj, title }) => {
       {/* Navigation Links */}
       <nav className="flex flex-col gap-2">
         {menuObj.map((item) =>
-        <>
+        <div key={item.id}>
               <NavLink
                 key={item.id}
                 to={item.url}
@@ -27,7 +27,7 @@ const Sidebar = ({ menuObj, title }) => {
                 {item.icon}
                 {item.text}
               </NavLink>
-        </>   
+        </div>   
         )}
         {/* Overview Section */}
 

@@ -1,7 +1,6 @@
-import { Fragment } from "react"
 import Select from 'react-select'
 
-const SingleSelect = ({ name, options, defalutValue, styles, placeholder }) => {
+const SingleSelect = ({ name, options, defalutValue, styles, placeholder, readonly }) => {
     return (
         <div>
             <Select
@@ -12,6 +11,7 @@ const SingleSelect = ({ name, options, defalutValue, styles, placeholder }) => {
                 defaultValue={defalutValue}
                 styles={styles}
                 placeholder={placeholder}
+                isDisabled={readonly}
             />
         </div>
     )

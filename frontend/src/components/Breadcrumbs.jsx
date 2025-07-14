@@ -12,7 +12,7 @@ const Breadcrumbs = () => {
                     const path = '/' + segments.slice(0, index + 1).join('/');
                     const label = segment.charAt(0).toUpperCase() + segment.slice(1);
                     return (
-                        <>
+                        <div key={path}>
                         <ChevronRight className="w-4 h-4 mx-1" />
                 
                         <li key={path} className={`flex items-center space-x-1 bg-gray-400
@@ -23,7 +23,7 @@ const Breadcrumbs = () => {
                             </Link>
                         </li>
                         
-                        </>
+                        </div>
                     );
                 })}
             </ol>
