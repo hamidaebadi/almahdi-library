@@ -23,7 +23,7 @@ const BookDetails = () => {
         setBook(filteredBook)
         setValue('title', filteredBook.title)
         setValue('author', filteredBook.author)
-       
+
         setValue('language', languages.find(lang => lang.label === filteredBook.language))
         setValue('category', categories.find(cate => cate.label === filteredBook.category))
     }, [])
@@ -43,13 +43,30 @@ const BookDetails = () => {
                     <Breadcrumbs />
 
                     <ActionBar>
-                        <Button variant='secondary' size='md' onClick={handleEditBtn}>
-                            Edit
-                        </Button>
+                        {isEditable ? (
+                            <>
+                                <Button variant='secondary' size='md' onClick={handleEditBtn}>
+                                    Cancle
+                                </Button>
 
-                        <Button variant='danger' size='md'>
-                            Delete
-                        </Button>
+                                <Button variant='primary' size='md'>
+                                    Save
+                                </Button>
+                            </>
+
+                        ) :(
+                            <>
+                                <Button variant='secondary' size='md' onClick={handleEditBtn}>
+                                    Edit
+                                </Button>
+
+                                <Button variant='danger' size='md'>
+                                    Delete
+                                </Button>
+                            </>
+
+                        )}
+
                     </ActionBar>
                 </div>
 
@@ -93,41 +110,41 @@ const BookDetails = () => {
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">Language</label>
-                              
+
 
                                 <Controller
-                                name="language"
-                                control={control}
-                                render={({field}) => (
-                                    <Select 
-                                    {...field}
-                                    options={languages}
-                                    isDisabled={!isEditable}
-                                    styles={singleSelectBookManagement}
-                                    value={field.value}
-                                    onChange={field.onChange}
-                                    />
-                                )}
+                                    name="language"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Select
+                                            {...field}
+                                            options={languages}
+                                            isDisabled={!isEditable}
+                                            styles={singleSelectBookManagement}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                        />
+                                    )}
                                 />
                             </div>
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">Category</label>
-                              
+
 
                                 <Controller
-                                name="category"
-                                control={control}
-                                render={({field}) => (
-                                    <Select 
-                                    {...field}
-                                    options={categories}
-                                    isDisabled={!isEditable}
-                                    styles={singleSelectBookManagement}
-                                    value={field.value}
-                                    onChange={field.onChange}
-                                    />
-                                )}
+                                    name="category"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Select
+                                            {...field}
+                                            options={categories}
+                                            isDisabled={!isEditable}
+                                            styles={singleSelectBookManagement}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                        />
+                                    )}
                                 />
                             </div>
                         </div>
@@ -173,9 +190,9 @@ const BookDetails = () => {
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">Edition</label>
-                              
 
-                                 <input
+
+                                <input
                                     type="text"
                                     {...register('edition')}
                                     readOnly={!isEditable}
@@ -190,9 +207,9 @@ const BookDetails = () => {
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">ISBN</label>
-                              
 
-                                 <input
+
+                                <input
                                     type="text"
                                     {...register('isbn')}
                                     readOnly={!isEditable}
@@ -247,9 +264,9 @@ const BookDetails = () => {
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">Number of Copies</label>
-                              
 
-                                 <input
+
+                                <input
                                     type="text"
                                     {...register('copies')}
                                     readOnly={!isEditable}
@@ -264,9 +281,9 @@ const BookDetails = () => {
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">Available of Copies</label>
-                              
 
-                                 <input
+
+                                <input
                                     type="text"
                                     {...register('availableofcopies')}
                                     readOnly={!isEditable}
@@ -281,21 +298,21 @@ const BookDetails = () => {
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">Book Condition</label>
-                            
-                                 
-                            <Controller
-                                name="condition"
-                                control={control}
-                                render={({field}) => (
-                                    <Select 
-                                    {...field}
-                                    options={bookConditions}
-                                    isDisabled={!isEditable}
-                                    styles={singleSelectBookManagement}
-                                    value={field.value}
-                                    onChange={field.onChange}
-                                    />
-                                )}
+
+
+                                <Controller
+                                    name="condition"
+                                    control={control}
+                                    render={({ field }) => (
+                                        <Select
+                                            {...field}
+                                            options={bookConditions}
+                                            isDisabled={!isEditable}
+                                            styles={singleSelectBookManagement}
+                                            value={field.value}
+                                            onChange={field.onChange}
+                                        />
+                                    )}
                                 />
                             </div>
 
@@ -342,9 +359,9 @@ const BookDetails = () => {
 
                             <div className="felx flex-col gap-1">
                                 <label className="block text-lg font-medium">Added By</label>
-                              
 
-                                 <input
+
+                                <input
                                     type="text"
                                     {...register('added_by')}
                                     readOnly={!isEditable}
