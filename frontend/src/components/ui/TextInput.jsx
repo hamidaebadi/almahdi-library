@@ -1,18 +1,18 @@
 import clsx from "clsx"
 
 const sizeVariants = {
-    sm: 'text-sm px-2 py-1',
-    md: 'text-base px-3 py-2',
-    lg: 'text-lg px-4 py-3',
-    xl: 'text-xl px-5 py-4',
-    '2xl': 'text-2xl px-6 py-5',
+    sm: 'text-sm px-3 py-1',
+    md: 'text-base px-4 py-3',
+    lg: 'text-lg px-5 py-4',
+    xl: 'text-xl px-6 py-5',
+    '2xl': 'text-2xl px-7 py-6',
 }
 const labelSizeVariants = {
-    sm: 'px-2 text-sm',
-    md: 'px-3 text-base',
-    lg: 'px-4 text-lg',
-    xl: 'px-5 text-xl',
-    '2xl': 'px-6 text-2xl',
+    sm: 'px-4 text-sm',
+    md: 'px-5 text-base',
+    lg: 'px-6 text-lg',
+    xl: 'px-7 text-xl',
+    '2xl': 'px-8 text-2xl',
 };
 const TextInput = ({
     label,
@@ -29,9 +29,9 @@ const TextInput = ({
     const labelSize = labelSizeVariants[size] || labelSizeVariants['md'];
 
     return (
-        <div className={clsx('flex border rounded-md overflow-hidden shadow-sm', className)}>
-            <div className={clsx('bg-gray-100 border-r text-gray-700 font-medium whitespace-nowrap flex items-center',
-                labelSize)}>
+        <div className={clsx('flex border-1 border-gray-200  rounded-md', className)}>
+            <div className={clsx('bg-gray-600 rounded-sm text-white font-medium whitespace-nowrap flex items-center',
+                labelSize,)}>
                 {label}
             </div>
             <input

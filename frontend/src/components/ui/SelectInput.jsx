@@ -31,10 +31,10 @@ const SelectInput = ({
   const labelSize = labelSizeVariants[size] || labelSizeVariants['md'];
 
   return (
-    <div className={clsx('flex border rounded-md overflow-hidden shadow-sm', className)}>
+    <div className={clsx('flex rounded-md overflow-hidden border-1 border-gray-200 shadow-sm w-full', className)}>
       <div
         className={clsx(
-          'bg-gray-100 border-r text-gray-700 font-medium whitespace-nowrap flex items-center',
+          'bg-gray-600 text-white font-medium whitespace-nowrap flex items-center',
           labelSize
         )}
       >
@@ -45,7 +45,7 @@ const SelectInput = ({
         value={value}
         onChange={onChange}
         className={clsx(
-          'w-full outline-none text-gray-900 bg-white appearance-none',
+          'w-full outline-none text-gray-900 bg-white appearance-none ',
           inputSize
         )}
         {...props}

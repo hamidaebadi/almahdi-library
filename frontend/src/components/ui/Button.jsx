@@ -7,7 +7,8 @@ const Button = ({
     size,
     onClick,
     disabled = false,
-    className = ''
+    className = '',
+    ...props
 }) => {
 
     const variantStyle = {
